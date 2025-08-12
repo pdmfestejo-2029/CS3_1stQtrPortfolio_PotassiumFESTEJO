@@ -23,3 +23,24 @@
     </script>
 </body>
 </html>
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The input element</h1>
+
+<form action="/action_page.php">
+  <label for="age">What is your current age?:</label>
+  <input type="text" id="age" name="age"><br><br>
+  <label for="xpectAge">Until what age do you want to live?:</label>
+  <input type="text" id="xpectAge" name="xpectAge"><br><br>
+  <label for="timesPerDay">How many times per day do you want to eat your favorite snack?:</label>
+  <input type="text" id="timesPerDay" name="timesPerDay"><br><br>
+</form>
+
+<p>Click the "Submit" button and the form-data will be sent to a page on the 
+server called "action_page.php".</p>
+
+</body>
+</html>

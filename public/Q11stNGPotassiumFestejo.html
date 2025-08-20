@@ -11,9 +11,15 @@
         var age = prompt("How old are you now?: ");
         var maxAge = prompt("What is the maximum age you want to reach?: ");
         var amountPerDay = prompt("How many times a day do you eat your favorite snack?: ");
-        var totalRequired = (amountPerDay * 365) * (maxAge - age);
-             document.write("You will need " + totalRequired + " of your favorite snack to last you until the ripe old age of " + maxAge + ".");
-
+        var sure = window.confirm("Your age is: " + age + ", You want to live until: " + maxAge + ", You want to eat your favorite snack " + amountPerDay + " times a day. Are you sure?");
+            if(sure) {
+                var totalRequired = (amountPerDay * 365) * (maxAge - age);
+                document.write("You will need " + totalRequired + " of your favorite snack to last you until the ripe old age of " + maxAge + ".");
+            } else {
+                document.write("What do you want me to do then huh?");
+            }
+ 
+ 
     </script>
 </body>
 </html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+   <style>
+        body {
+            background-color: black; color: teal; font-family: Times New 'Times New Roman', Times, serif; font-size: 30px;
+        }
+    </style>
+
+    <h2> Q1 3rd Graded Exercise Submitted by Pio Festejo of 9Potassium </h2>
+
+     <label for="num">Guess the number: **** </label>
+        <br><br>
+
+        <label for="range">The number is from 1 to 100 </label>
+        <br><br>
+
+        <label for="guess">Enter you guess: </label>
+            <input type="text" id="guess">
+        <br><br>
+
+            <button onclick="checkIt()">Check It</button>
+            <br><br>
+
+            <form>
+            <output id="guessResult"> Result: </output>
+            <br><br>
+            </form>
+
+    <script>
+
+            var dNumber = Math.floor(Math.random() * 100 + 1);
+
+        function checkIt() {
+            var guess = parseInt(document.getElementById("guess").value);
+
+            if (guess === dNumber) {
+                resultText = "Congratulations! You guessed the correct number: " + dNumber;
+            } else if (guess < dNumber) {
+                resultText = "Your guess is too low. Try again!";
+            } else {
+                resultText = "Your guess is too high. Try again!";
+            }
+
+            document.getElementById("guessResult").innerHTML = resultText;
+        }
+    </script>
+
+</body>
+</html>

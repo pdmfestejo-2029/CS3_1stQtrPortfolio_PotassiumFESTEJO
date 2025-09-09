@@ -2,16 +2,52 @@
 <html>
 <body>
 
+   <style>
+        body {
+            background-color: black; color: teal; font-family: Times New 'Times New Roman', Times, serif; font-size: 30px;
+        }
+    </style>
+
     <h2> Q1 2nd Graded Exercise submitted by Festejo of Potassium </h2>
 
-    <script>
-        function totalMeal() {
-            var mealPrice = prompt("How much is your meal?: ");
-            var totalCost = (mealPrice + tipAmount + serviceChange);
+        <label for="mp">Meal Price: </label>
+        <input type="text" id="mp">
+        <br><br>
 
-            document.write("The total cost is " + totalCost + );
-        }
+        <label for="tip">Tip: </label>
+            <input type="text" id="tip">
+        <br><br>
+
+        <label for="sc">Service Charge: </label>
+            <input type="text" id="sc">
+        <br><br>
+
+            <button onclick="totalMeal()">Accept Input</button>
+            <br><br>
+
+            <form>
+            <output id="totalMeal"> Total Meal: </output>
+            <br><br>
+            </form>
+
+    <script> 
+       function totalMeal(){
+
+           var mp = parseFloat(document.getElementById("mp").value);
+           var tip = parseFloat(document.getElementById("tip").value);
+           var sc = parseFloat(document.getElementById("sc").value);
+
+           var totalCost = (mp + tip + ((sc / 100) * mp));
+           var totalOutput = totalCost.toFixed(2);  
+              document.getElementById("totalMeal").innerHTML = "Total Meal: " + totalOutput;
+       }
     </script>
+
+    <footer>
+        <p>GeeksforGeeks. (2025, July 11). HTML &lt;input type="text"&gt; GeeksforGeeks. https://www.geeksforgeeks.org/html/html-input-typetext/</p> 
+        <br>
+        <p>GeeksforGeeks. (2025b, July 11). HTML &lt;output&gt; Tag. GeeksforGeeks. https://www.geeksforgeeks.org/html/html-output-tag/</p>
+    </footer>
 
 </body>
 </html> 

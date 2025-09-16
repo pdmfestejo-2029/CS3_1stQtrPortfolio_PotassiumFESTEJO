@@ -1,0 +1,14 @@
+<h1>My Favorite Animals</h1>
+<ul id="animalList"></ul>
+
+<script>
+  let animals = ["Noah", "Javier", "Hans"];
+    animals.push ("Iman");
+    animals.push ("Sam");
+    animals.push ("DISCLAMER, THE NAMES LISTED ABOVE ARE NOT TO BE TAKEN SERIOUSLY");
+  let list = document.getElementById("animalList");
+
+  for (let i = 0; i < animals.length; i++) {
+    list.innerHTML += `<li>${animals[i]}</li>`;
+  }
+</script>
